@@ -307,10 +307,3 @@ button{
     text-align: center;
     display: inline-block
 }
-
-button[disabled] {
-    background-color: #d3d5d9;
-    cursor: default;
-    color: #fff;
-    border: 0;
-}

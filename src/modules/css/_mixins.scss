@@ -1,0 +1,25 @@
+/**
+* @author: fredafei
+* @date: 2018/06/26
+*/
+
+@mixin i-button($type:default,$plain:false,$round: false) {
+  display: inline-block;
+  padding: .24*$unit .4*$unit;
+  margin: 0;
+  line-height: 1;
+  text-align: center;
+  color: $default-color;
+  font-size: .28*$unit;
+  font-weight: 500;
+  background-color: $color-white;
+  border: 1px solid #d0d0d0;
+  border-radius: .04*$unit;
+  outline: none;
+  user-select: none;
+  white-space: nowrap;
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+}
+

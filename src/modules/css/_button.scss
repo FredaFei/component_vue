@@ -1,0 +1,68 @@
+/**
+* @author: fredafei
+* @date: 2018/06/26
+*/
+.i-button {
+  @include i-button()
+}
+
+.i-button-plain-default {
+  color: $default-color;
+  border-color: $default-color;
+  background-color: transparent;
+}
+
+.i-button-plain-primary {
+  color: $primary-color;
+  border-color: $primary-color;
+  background-color: transparent;
+}
+
+.i-button-plain-danger {
+  color: $danger-color;
+  border-color: $danger-color;
+  background-color: transparent;
+}
+
+.i-button-default {
+  color: $default-color;
+  border-color: $default-color;
+  background-color: $color-grey;
+}
+
+.i-button-primary {
+  color: $color-white;
+  border-color: $primary-color;
+  background-color: $primary-color;
+}
+
+.i-button-danger {
+  color: $color-white;
+  border-color: $danger-color;
+  background-color: $danger-color;
+}
+
+.i-button-normal,
+.i-button-small {
+  padding: .16*$unit .24*$unit;
+  font-size: .24*$unit;
+}
+
+.i-button-middle {
+  padding: .2*$unit .32*$unit;
+  font-size: .26*$unit;
+}
+
+.i-button-large {
+  padding: .28*$unit .4*$unit;
+  font-size: .32*$unit;
+}
+
+.i-button-row {
+  display: block;
+  width: 100%;
+}
+
+.i-button-disabled {
+  opacity: .6;
+}

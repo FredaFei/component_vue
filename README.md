@@ -36,12 +36,12 @@ __API__
 
 |     参数     | 说明 | 类型 | 默认值 | 可选值 |
 | ------------ | --- | ----- |------|----------------|
-| type | 按钮类型 | String | defautl| primary success error|
-| size | 按钮尺寸 | String | normal | small large |
-| plain | 是否朴素按钮 | Boolean | false | true |
+| type | 按钮类型 | String | defautl| primary danger|
+| size | 按钮尺寸 | String | small | middle large |
+| plain | 是否朴素按钮，没有背景色 | Boolean | false | true |
 | disabled | 是否禁用状态 | Boolean | false | true |
-| bottomAction | 是否为底部行动按钮 | Boolean | false | true |
-| color | 按钮背景色 | String | - | - |
+| row | 是否为底部行动按钮 | Boolean | false | true |
+| className | 自定义类名样式 | String | - | - |
 
 ### Badge(标记)
 引用：
@@ -81,10 +81,10 @@ __API__
 __API__
 
 | 属性        | 类型    |  默认值  |  说明  |
-| -------- -- | -------- | ------------- |
-| text   | String  |   'loading'    | 提示文案|
-| shape  | String   |   'square'    | 提示框形状, 'square'正方形，'rect'长方形|
-| type   | String    |   'tip'    | 提示框icon显示类型，'tip'：没有icon，可选值: 'success'：成功, 'error'：失败，'loading'：loading, 'fail'：fail, 'warning'：警告|
+| ---------- | -------- | --------|------- |
+| text   | String  |   loading    | 提示文案|
+| shape  | String   |   square    | 提示框形状, 'square'正方形，'rect'长方形|
+| type   | String    |   tip    | 提示框icon显示类型，'tip'：没有icon，可选值: 'success'：成功, 'error'：失败，'loading'：loading, 'fail'：fail, 'warning'：警告|
 | delay    | Number   |   1500    | 提示框显示时间，单位ms|
 | showBg    | Boolean   |   false    | 是否显示遮罩层|
 | position   | String  |   'center' | 提示框显示位置，'center'：居中，'top'：顶部，'bottom'：底部|

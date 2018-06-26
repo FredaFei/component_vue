@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../../modules/css/var";
+  @import "../../modules/css/index";
 
   .b-badge{
     display: inline-block;
@@ -35,16 +35,13 @@ export default {
     color: $color-white;
   }
   .is-primary{
-    background-color: $color-blur;
+    background-color: $primary-color;
   }
   .is-success{
-    background-color: $success-color;
+    background-color: $primary-color;
   }
-  .is-warning{
-    background-color: $warning-color;
-  }
-  .is-error{
-    background-color: $error-color;
+  .is-danger{
+    background-color: $danger-color;
   }
   .is-size-normal{
     font-size: 14px;
