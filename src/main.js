@@ -4,6 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+// 公用组件
+import Toast from '@/components/toast/';
+import notify from '@/components/notify/';
+Vue.use(Toast)
+Vue.use(notify)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

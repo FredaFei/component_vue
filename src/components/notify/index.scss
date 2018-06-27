@@ -1,106 +1,107 @@
 .notify-container {
-    .notify-mask {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, .6);
-        overflow: hidden;
+  .notify-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    overflow: hidden;
+    z-index: 4999;
+  }
+  //alert
+  .notify-alert,
+  .notify-confirm {
+    display: table;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 6rem;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 0.06rem;
+    z-index: 5000;
+  }
+  .notify-hd {
+    padding: .2rem .1rem;
+    text-align: center;
+    color: #333;
+    font-size: .32rem;
+  }
+  .notify-bd {
+    padding: 0 .2rem .2rem;
+    min-height: .8rem;
+    font-size: .3rem;
+    color: #999999;
+    text-align: center;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+  .notify-ft {
+    display: flex;
+    border-top: .02rem solid #E0E0E0;
+    .confirm-btn, .cancel-btn {
+      flex: 1;
+      text-align: center;
+      font-size: .32rem;
+      color: #888;
+      padding: .2rem 0;
     }
-    //alert
-    .notify-alert,
-    .notify-confirm {
-        display: table;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 6rem;
-        margin: auto;
-        background: #ffffff;
-        border-radius: 0.06rem;
-        z-index: 5000;
+    .cancel-btn + .confirm-btn {
+      border-left: .02rem solid #E0E0E0;
     }
-    .notify-hd {
-        padding: .2rem .1rem;
-        text-align: center;
-        color: #333;
-        font-size: .32rem;
+    .cancel-btn {
+      color: #448FF2;
     }
-    .notify-bd {
-        padding: 0 .2rem .2rem;
-        min-height: .8rem;
-        font-size: .3rem;
-        color: #999999;
-        text-align: center;
-        word-break: break-all;
-        word-wrap: break-word;
-    }
-    .notify-ft {
-        display: flex;
-        border-top: .02rem solid #E0E0E0;
-        .confirm-btn, .cancel-btn {
-            flex: 1;
-            text-align: center;
-            font-size: .32rem;
-            color: #888;
-            padding: .2rem 0;
-        }
-        .cancel-btn + .confirm-btn {
-            border-left: .02rem solid #E0E0E0;
-        }
-        .cancel-btn {
-            color: #448FF2;
-        }
-    }
+  }
 
 }
 
 .fade-in-enter-active,
 .fade-in-leave-active {
-    transition: opacity linear 0.2s;
+  transition: opacity linear 0.2s;
 }
 
 .fade-in-enter, .fade-in-leave-to {
-    opacity: 0;
+  opacity: 0;
 }
 
 .dialog-enter-active {
-    animation: dialog-in .5s;
+  animation: dialog-in .5s;
 }
 
 .dialog-leave-active {
-    animation: dialog-out .3s;
+  animation: dialog-out .3s;
 }
 
 @keyframes dialog-in {
-    0% {
-        transform: scale(1.185);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+  0% {
+    transform: scale(1.185);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes dialog-out {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(0.85);
-        opacity: 0;
-    }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
 }
 
 .mask-enter, .mask-leave-active {
-    opacity: 0;
+  opacity: 0;
 }
 
 .mask-leave-active, .mask-enter-active {
-    transition: opacity 300ms;
+  transition: opacity 300ms;
 }

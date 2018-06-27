@@ -53,6 +53,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../modules/css/index.scss";
-  @import "../../modules/css/_button.scss";
+  @import "../../modules/style/index";
+  @import "../../modules/style/_button.scss";
 </style>

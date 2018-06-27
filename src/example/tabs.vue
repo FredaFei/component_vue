@@ -43,5 +43,4 @@
 </script>
 
 <style lang="scss">
-  @import "../modules/css/reset.scss";
 </style>

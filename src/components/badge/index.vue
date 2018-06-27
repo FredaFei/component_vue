@@ -1,6 +1,6 @@
 <template>
   <span class="b-badge"
-  :class="['is-'+type,'is-size-'+size]"
+  :class="['is-'+type,{'is-round':round}]"
   :style="{'background-color': color}">
     <slot></slot>
   </span>
@@ -12,51 +12,51 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'primary'
+      default: 'default'
     },
     color: {
       type: String,
       default: ''
     },
-    size: {
-      type: String,
-      default: 'normal'
-    }
+    round: {
+      type: Boolean,
+      default: false
+    },
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  @import "../../modules/css/index";
+  @import "../../modules/style/index";
 
   .b-badge{
     display: inline-block;
+    vertical-align: middle;
     text-align: center;
     color: $color-white;
+    font-size: .24*$unit;
+    padding: .3*$unit .4*$unit;
+    height: .32*$unit;
+    padding: 0 .12*$unit;
+    line-height: .32*$unit;
+    border-radius: .16*$unit;
+  }
+  .is-default{
+    background-color: #26a2ff;
   }
   .is-primary{
-    background-color: $primary-color;
+    background-color: #f74c31;
   }
-  .is-success{
-    background-color: $primary-color;
+  .is-info{
+    background-color: #4caf50;
   }
-  .is-danger{
-    background-color: $danger-color;
+  .is-warning{
+    background-color: #ffc107;
   }
-  .is-size-normal{
-    font-size: 14px;
-    padding: 2px 8px;
-    border-radius: 12px;
-  }
-  .is-size-small{
-    font-size: 12px;
-    padding: 2px 6px;
-    border-radius: 8px;
-  }
-  .is-size-large{
-    font-size: 16px;
-    padding: 2px 10px;
-    border-radius: 14px;
+  .is-round{
+    width: .32*$unit;
+    padding: .06*$unit;
+    border-radius: 50%;
   }
 
 </style>

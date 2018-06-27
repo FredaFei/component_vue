@@ -1,5 +1,6 @@
-/**pBar.vue
- * 进度条组件
+/**
+ * pBar 进度条组件
+ *
  */
 <template>
     <div class="progress-bar">

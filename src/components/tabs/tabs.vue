@@ -32,6 +32,8 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../../modules/style/index";
+
   .tab-container{
     .tab-navs {
       display: flex;
