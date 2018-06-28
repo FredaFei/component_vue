@@ -28,7 +28,7 @@
       },
       title: {
         type: String,
-        default: 'title'
+        default: ''
       },
       content: {
         type: String,

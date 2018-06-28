@@ -2,7 +2,8 @@
   <button class="i-button"
           :disabled="disabled"
           :class="classs"
-          :className="className">
+          :className="className"
+  @click="buttonFn">
     <span class="i-button-text"><slot></slot></span>
   </button>
 </template>
@@ -47,6 +48,11 @@
           this.row ? `i-button-row` : '',
           `i-button-${this.size}`
         ]
+      }
+    },
+    methods: {
+      buttonFn(){
+        this.$emit('btnFn')
       }
     }
   }

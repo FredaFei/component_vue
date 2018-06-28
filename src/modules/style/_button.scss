@@ -8,7 +8,7 @@
 
 .i-button-plain-default {
   color: $default-color;
-  border-color: $default-color;
+  border-color: #d0d0d0;
   background-color: transparent;
 }
 
@@ -25,8 +25,8 @@
 }
 
 .i-button-default {
-  color: $default-color;
-  border-color: $default-color;
+  color: $color-white;
+  border-color: #d0d0d0;
   background-color: $color-grey;
 }
 

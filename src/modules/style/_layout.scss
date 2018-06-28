@@ -1,0 +1,23 @@
+$type: padding margin;
+$direct: top left bottom right;
+@each $tp in $type {
+  $type: 'm';
+  @if ($tp == 'padding') {
+    $type: 'p'
+  }
+  @each $d in $direct {
+    $d: 't';
+    @if ($d == 'left') {
+      $d: 'l';
+    } @else if ($d == 'right') {
+      $d: 'r'
+    } @else if ($d == 'bottom') {
+      $d: 'b';
+    }
+    @for $i from 1 through 10 {
+      .#{$type}#{$d}#{$i*10} {
+        @include result($type, $d, $i)
+      }
+    }
+  }
+}

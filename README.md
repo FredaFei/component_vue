@@ -89,6 +89,7 @@ __API__
 | showBg    | Boolean   |   false    | 是否显示遮罩层|
 | position   | String  |   'center' | 提示框显示位置，'center'：居中，'top'：顶部，'bottom'：底部|
 
+提示：当type不为tip且shape为square时，type的其他可选值才会生效
 
 ### notify（确认框组件）
 

@@ -1,8 +1,10 @@
 <template>
-  <section class="header-bar">
-    <div class="left" @click="backFn"></div>
-    <div class="text">{{title}}</div>
-    <div class="right" @click="showMenuFn" v-show="hasRight"></div>
+  <section class="header-wrapper">
+    <div class="header-bar">
+      <div class="left" @click="backFn"></div>
+      <div class="text">{{title}}</div>
+      <div class="right" @click="showMenuFn" v-show="hasRight"></div>
+    </div>
   </section>
 </template>
 <script>
@@ -23,12 +25,18 @@
         this.$router.go(-1)
       },
       showMenuFn(){
-        this.$emit('clickFn',true)
+        this.$emit('menuFn',true)
       }
     }
   }
 </script>
 <style lang="scss" scoped>
+  .header-wrapper{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
   .header-bar{
     display: flex;
     justify-content: space-between;

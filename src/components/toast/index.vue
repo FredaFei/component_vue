@@ -26,11 +26,11 @@
       },
       shape: {
         type: String,
-        default: 'square'
+        default: 'rect'
       },
       showBg: {
         type: Boolean,
-        default: false
+        default: true
       },
       position: {
         type: String,
@@ -90,6 +90,9 @@
   @import "../../modules/style/index";
   .toast-container {
     @include dialog-wrapper();
+    .mask{
+      @include mask();
+    }
     &.top {
       align-items: flex-start;
       margin-top: 1rem;
@@ -124,7 +127,7 @@
       }
       // 长条形
       &.toast-shape-rect {
-        width: 5.2rem;
+        min-width: 1.2rem;
         height: 0.8rem;
         text-align: center;
       }

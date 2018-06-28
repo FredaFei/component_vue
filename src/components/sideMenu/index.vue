@@ -1,10 +1,10 @@
 <template>
   <aside class="aside-wrapper">
     <transition name="mask">
-      <div class="mask" v-show="showBg&&show"></div>
+      <div class="mask" v-show="showBg&&show" @click="hideMask"></div>
     </transition>
-    <transition>
-      <div class="content">
+    <transition name="slide-left">
+      <div class="content" v-show="show">
         <slot name="side"></slot>
       </div>
     </transition>
@@ -16,11 +16,16 @@
     props: {
       showBg: {
         type: Boolean,
-        default: false
+        default: true
       },
       show: {
         type: Boolean,
         default: false
+      }
+    },
+    methods: {
+      hideMask(){
+        this.$emit('hideFn',false)
       }
     }
   }
@@ -28,7 +33,9 @@
 <style lang="scss" scoped>
   @import "../../modules/style/index";
   .aside-wrapper{
-    @include dialog-wrapper();
+    .mask{
+      @include mask();
+    }
     .content{
       position: fixed;
       top: 0;
@@ -38,7 +45,7 @@
       overflow: auto;
       -webkit-overflow-scrolling: touch;
       background: #fff;
-      z-index: 5000;
+      z-index: 10000;
     }
   }
 </style>

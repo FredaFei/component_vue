@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import './modules/style/index.scss'
 
 // 公用组件
 import Toast from '@/components/toast/';
