@@ -5,18 +5,18 @@ $direct: top left bottom right;
   @if ($tp == 'padding') {
     $type: 'p'
   }
-  @each $d in $direct {
+  @each $dir in $direct {
     $d: 't';
-    @if ($d == 'left') {
+    @if ($dir == 'left') {
       $d: 'l';
-    } @else if ($d == 'right') {
+    } @else if ($dir == 'right') {
       $d: 'r'
-    } @else if ($d == 'bottom') {
+    } @else if ($dir == 'bottom') {
       $d: 'b';
     }
     @for $i from 1 through 10 {
       .#{$type}#{$d}#{$i*10} {
-        @include result($type, $d, $i)
+        @include result($tp, $dir, $i)
       }
     }
   }

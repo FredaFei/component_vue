@@ -43,6 +43,7 @@
   import IButton from '@/components/ibutton/index.vue'
 
   export default {
+    name:'ibutton',
     components: {IButton}
   }
 

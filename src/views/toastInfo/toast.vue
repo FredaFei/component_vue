@@ -1,12 +1,18 @@
 <template>
-  <div>
-    <i-button type="default" plain @btnFn="clickFn_1">toast 默认</i-button>
-    <i-button type="default" plain @btnFn="clickFn_2">toast success</i-button>
-    <i-button type="default" plain @btnFn="clickFn_3">toast error</i-button>
-    <i-button type="default" plain @btnFn="clickFn_4">toast loading</i-button>
-    <i-button type="default" plain @btnFn="clickFn_5">toast warning</i-button>
-    <i-button type="default" plain @btnFn="clickFn_6">toast fail</i-button>
-    <i-button type="default" plain @btnFn="clickFn_7">toast position</i-button>
+  <div class="pt20 pl20">
+    <div class="row-item">
+      <i-button type="default" plain @btnFn="clickFn_1">toast 默认</i-button>
+      <i-button type="default" plain @btnFn="clickFn_2">toast success</i-button>
+      <i-button type="default" plain @btnFn="clickFn_3">toast error</i-button>
+    </div>
+    <div class="row-item">
+      <i-button type="default" plain @btnFn="clickFn_4">toast loading</i-button>
+      <i-button type="default" plain @btnFn="clickFn_5">toast warning</i-button>
+      <i-button type="default" plain @btnFn="clickFn_6">toast fail</i-button>
+    </div>
+    <div class="row-item">
+      <i-button type="default" plain @btnFn="clickFn_7">toast position</i-button>
+    </div>
   </div>
 </template>
 <script>
@@ -66,7 +72,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.custom {
-  background: red;
-}
+  .row-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & + .row-item {
+      margin-top: 10px;
+    }
+  }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pt20 pl20">
     <i-button type="default" plain @btnFn="clickFn_1">confirm 默认</i-button>
     <i-button type="default" plain @btnFn="clickFn_2">confirm 回调</i-button>
     <i-button type="default" plain @btnFn="clickFn_3">confirm 自定义样式</i-button>
@@ -35,16 +35,23 @@
       clickFn_3() {
         this.$confirm({
           title: 'this is a title',
-          content:'this is a content',
-          className:'custom',
-          btnText:['左侧按钮','右侧按钮']
+          content: 'this is a content',
+          className: 'custom',
+          btnText: ['左侧按钮', '右侧按钮']
         });
       }
     }
   }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
   .custom {
-    background: red;
+    .notify-confirm{
+      .notify-hd {
+        .title{
+          font-size: .36rem;
+          color: red;
+        }
+      }
+    }
   }
 </style>

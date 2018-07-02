@@ -1,7 +1,7 @@
 封装了一些常用的组件
 
 components 目录为封装的组件
-example 目录为组件使用的demo
+views 目录为组件使用的demo
 
 ## Build Setup
 
@@ -18,6 +18,13 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+
+## 本地预览效果
+
+![side](https://github.com/FredaFei/component_vue/blob/master/previews/1.png)
+![index](https://github.com/FredaFei/component_vue/blob/master/previews/2.png)
+![alert](https://github.com/FredaFei/component_vue/blob/master/previews/3.png)
+
 
 ## 组件使用文档
 
@@ -140,7 +147,7 @@ __API__
 
 | 属性        | 类型    |  默认值  |  说明  |
 | ---------- | -------- | -------- |------|
-| type   | Number  |   0    | 空白类型 ，可选值: 0：成功, 1：失败，2：loading, 3：fail, 4：警告 |
+| type   | Number  |   0    | 空白类型 ，可选值: 0：失败, 1：暂无数据 |
 
 ### cell（单元格）
 
@@ -242,9 +249,7 @@ __API__
 | 属性        | 类型    |  默认值  |  说明  |
 | ---------- | -------- | -------- |------|
 | selectedTab   | String  |   -    | 默认选中的tab |
-| name   | String  |   -    | 每组的tab名 |
-
-和Bootstrap类似的结构和用法
+| name   | String  | - | 每组的tab名 |和Bootstrap类似的结构和用法
 ---------------
 
 

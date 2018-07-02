@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pt20 pl20">
     <i-button type="default" @btnFn="alertFn_1">alert 默认</i-button>
     <i-button type="default" @btnFn="alertFn_2">alert 回调</i-button>
     <i-button type="default" @btnFn="alertFn_3">alert 自定义样式</i-button>

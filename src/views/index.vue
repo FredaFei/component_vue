@@ -1,6 +1,6 @@
 <template>
-  <div class="content">
-    <h1>welcome</h1>
+  <div class="content pd20">
+    <h1 class="pt20 pl20">welcome</h1>
   </div>
 </template>
 <script>

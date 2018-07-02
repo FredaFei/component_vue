@@ -3,7 +3,7 @@
 * @date: 2018/06/26
 */
 
-@mixin result($type, $dir, $val:0) {
+@mixin result($type:margin, $dir:top, $val:0) {
   #{$type}-#{$dir}: $val * $unit * .1;
 }
 

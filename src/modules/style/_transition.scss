@@ -7,6 +7,15 @@
 .slide-left-leave-to{
   transform: translateX(-100%);
 }
+.slide-up-enter-active,
+.slide-up-leave-active{
+  transition: all .4s ease;
+}
+
+.slide-up-enter,
+.slide-up-leave-to{
+  transform: translateY(100%);
+}
 
 .fade-in-enter-active,
 .fade-in-leave-active {

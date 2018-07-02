@@ -21,6 +21,9 @@
           <router-view/>
         </keep-alive>
       </div>
+      <transition name="slide-up">
+        <footer-bar v-if="isHost" :list-data="foot" :router-name="routerName"/>
+      </transition>
     </div>
   </div>
 </template>
@@ -29,26 +32,59 @@
   import ViewBox from '@/components/viewBox/index'
   import SideMenu from '@/components/sideMenu/index'
   import HeaderBar from '@/components/headerBar/index'
+  import FooterBar from '@/components/footBar/index'
 
   export default {
     name: 'App',
     components: {
-      SideMenu, HeaderBar, ViewBox
+      SideMenu, HeaderBar, ViewBox, FooterBar
     },
     data() {
       return {
         showSidemenu: false,
-        title: 'haha'
+        title: 'haha',
+        isHost: true,
+        routerName: '',
+        foot: [
+          {
+            title: '首页',
+            name: 'index',
+            icon: 'icon-home',
+            iconActive: 'icon-home-o'
+          },
+          {
+            title: 'tab面板',
+            name: 'tab',
+            icon: 'icon-cart',
+            iconActive: 'icon-cart-o'
+          },
+          {
+            title: '滚动窗口',
+            name: 'scrollBox',
+            icon: 'icon-user',
+            iconActive: 'icon-user-o'
+          }
+        ]
       }
     },
     watch: {
       '$route'() {
+        const routerConfig = ['scrollBox', 'scrollList']
+        if (routerConfig.includes(this.$route.name)) {
+          this.routerName = this.$route.name
+          this.isHost = false
+        } else {
+          this.isHost = true
+        }
         this.title = this.$route.meta.title
+        document.title = this.$route.meta.title
         this.showSidemenu = false
       }
     },
     created() {
       this.title = this.$route.meta.title
+      document.title = this.$route.meta.title
+      this.$util.setSize()
     },
     methods: {
       toggleSlideMenu(flag) {

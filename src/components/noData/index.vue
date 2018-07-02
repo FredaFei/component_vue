@@ -16,9 +16,8 @@
         data() {
             return {
                 infoList: [
-                    {text: '网络可能跑到外太空了...', img: require('./imgs/page_blank.png')},
-                    {text: 'haha...', img: require('./imgs/page_blank.png')},
-                    {text: 'jaja...', img: require('./imgs/page_blank.png')}
+                    {text: '网络可能跑到外太空了...', img: require('./imgs/page_blank_1.png')},
+                    {text: '暂无数据...', img: require('./imgs/page_blank_2.png')}
                 ]
             }
         }

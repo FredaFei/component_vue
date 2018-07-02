@@ -65,10 +65,8 @@
                         this.upReady = false
                         this.scrollTopText = '下拉刷新'
                         this.$emit('pullDown')
-                        console.log('totop')
                     } else if (this.showBottom && (this.scroll.y <= this.scroll.maxScrollY + 50)) {
                         this.$emit('pullUp')
-                        console.log('tobottom')
                     }
                 })
                 this.scroll.on('touchEnd', pos => {

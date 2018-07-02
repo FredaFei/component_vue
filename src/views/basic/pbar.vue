@@ -1,39 +1,24 @@
 <template>
   <div class="wrap">
-    <h1>cell:</h1>
+    <h1>PBar:</h1>
     <div class="box">
       <div class="row-item">
-        <cell left-lext="left" right-text="right" @onClick="cellFn"></cell>
+        <p-bar percent="40"/>
       </div>
       <div class="row-item">
-        <cell left-lext="left" right-text="right" color="#f44"></cell>
-      </div>
-      <div class="row-item">
-        <cell left-lext="left" right-text="right" is-link></cell>
+        <p-bar percent="60" color="#afd325"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import Cell from '@/components/cell/index.vue';
+  import PBar from '@/components/pBar/index.vue'
 
   export default {
-    name: 'input-cell',
+    name: 'pbar',
     components: {
-      Cell
-    },
-    methods: {
-      toastFn() {
-        this.$toast({
-          text: 'toast',
-          shape: 'square',
-          type: 'fail'
-        });
-      },
-      cellFn() {
-        this.toastFn()
-      }
+      PBar
     }
   }
 
@@ -41,7 +26,6 @@
 
 <style lang="scss">
   .wrap {
-    background: #fff;
     h1 {
       margin-left: 20px;
       text-align: left;

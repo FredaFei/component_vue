@@ -1,24 +1,5 @@
 <template>
   <div class="wrap">
-    <h1>badge:</h1>
-    <div class="box">
-      <div class="row-item">
-        <badge>12</badge>
-        <badge type="primary">12</badge>
-        <badge type="info">12</badge>
-        <badge type="warning">12</badge>
-        <badge color="#aaddff" round>12</badge>
-      </div>
-    </div>
-    <h1>PBar:</h1>
-    <div class="box">
-      <div class="row-item">
-        <p-bar percent="40"/>
-      </div>
-      <div class="row-item">
-        <p-bar percent="60" color="#afd325"/>
-      </div>
-    </div>
     <h1>p-circle:</h1>
     <div class="box">
       <div class="row-item">
@@ -31,14 +12,12 @@
 </template>
 
 <script>
-  import Badge from '@/components/badge/index.vue'
-  import PBar from '@/components/pBar/index.vue';
-  import PCircle from '@/components/pCircle/index.vue';
+  import PCircle from '@/components/pCircle/index.vue'
 
   export default {
-    name: 'bdata',
+    name: 'pcircle',
     components: {
-      Badge, PBar, PCircle
+      PCircle
     }
   }
 

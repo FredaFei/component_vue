@@ -3,6 +3,6 @@
 </template>
 <script>
   export default {
-    name: 'Iform'
+    name: 'layout'
   }
 </script>

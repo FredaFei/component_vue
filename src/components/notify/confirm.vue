@@ -1,5 +1,5 @@
 <template>
-  <div class="notify-container" :class="[className]">
+  <div class="notify-container" :class="[className]" v-if="show">
     <transition name="mask">
       <div class="notify-mask" v-show="showBg&&show"></div>
     </transition>

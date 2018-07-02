@@ -25,19 +25,35 @@ const routers = [
     component: resolve=>require(['views/basic/index.vue'],resolve),
     children: [
       {
-        path: 'button',
-        name: 'button',
+        path: 'ibutton',
+        name: 'ibutton',
         component: resolve=>require(['views/basic/button.vue'],resolve),
         meta: {
           title: '按钮'
         }
       },
       {
-        path: 'data',
-        name: 'data',
-        component: resolve=>require(['views/basic/data.vue'],resolve),
+        path: 'dbadge',
+        name: 'dbadge',
+        component: resolve=>require(['views/basic/dbadge.vue'],resolve),
         meta: {
           title: '数据'
+        }
+      },
+      {
+        path: 'pbar',
+        name: 'pbar',
+        component: resolve=>require(['views/basic/pbar.vue'],resolve),
+        meta: {
+          title: '水平进度条'
+        }
+      },
+      {
+        path: 'pcircle',
+        name: 'pcircle',
+        component: resolve=>require(['views/basic/pcircle.vue'],resolve),
+        meta: {
+          title: '圆环进度条'
         }
       }
     ]
@@ -56,6 +72,32 @@ const routers = [
         component: resolve=>require(['views/form/input.vue'],resolve),
         meta: {
           title: '输入框'
+        }
+      }
+    ]
+  },
+  {
+    path: '/layout',
+    name: 'layout',
+    meta: {
+      title: 'layout'
+    },
+    component: resolve=>require(['views/layout/index'],resolve),
+    children: [
+      {
+        path: 'scrollBox',
+        name: 'scrollBox',
+        component: resolve=>require(['views/layout/scrollBox.vue'],resolve),
+        meta: {
+          title: '滚动窗口'
+        }
+      },
+      {
+        path: 'scrollList',
+        name: 'scrollList',
+        component: resolve=>require(['views/layout/scrollList.vue'],resolve),
+        meta: {
+          title: '列表滚动窗口'
         }
       }
     ]
@@ -100,14 +142,6 @@ const routers = [
         component: resolve=>require(['views/toastInfo/confirm.vue'],resolve),
         meta: {
           title: '操作弹出框'
-        }
-      },
-      {
-        path: 'dialog',
-        name: 'dialog',
-        component: resolve=>require(['views/toastInfo/dialog.vue'],resolve),
-        meta: {
-          title: '模态框'
         }
       },
       {
