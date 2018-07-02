@@ -250,8 +250,6 @@ __API__
 | ---------- | -------- | -------- |------|
 | selectedTab   | String  |   -    | 默认选中的tab |
 | name   | String  | - | 每组的tab名 |和Bootstrap类似的结构和用法
----------------
-
 
 __Event__
 
