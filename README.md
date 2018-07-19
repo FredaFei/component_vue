@@ -174,6 +174,49 @@ __Event__
 | ------------ | --- | ----- |
 | click | 点击 cell 时触发 | - |
 
+
+### ISwitch（Switch 开关，表示两种相互对立的状态间的切换）
+
+引用：
+```
+  import tabs from 'components/tabs';
+  <i-switch :opened="opened" @onchange="changeFn"></i-switch>
+
+```
+
+__API__
+
+| 属性        | 类型    |  默认值  |  说明  |
+| ---------- | -------- | -------- |------|
+| opened   | Boolean  |   false   | 打开关闭 |
+| disabled   | Boolean  | false | 是否禁用 |
+
+__Event__
+
+|     事件名     | 说明 | 参数 |
+| ------------ | --- | ----- |
+| onchange | 点击 ISwitch 时触发 | - |
+
+
+### slide（轮播）
+
+引用：
+```
+  import Slide from '@/components/slide/index.vue'
+  <slide :slides="slides" height="3rem" page-style="line"></slide>
+
+```
+
+__API__
+
+| 属性        | 类型    |  默认值  |  说明  |
+| ---------- | -------- | -------- |------|
+| slides   | Array  | [] | 轮播图所需数据 |
+| height   | String  |  3.8rem  | 轮播图高度 |
+| pageStyle   | 分页器样式  | dot | 可选值有dot、line |
+| pagePos   | 分页器位置  | center | 可选值有right、left、center |
+
+
 ### scrollBox（该组件适用于页面需要上拉下拉加载数据的case）
 
 引用：
@@ -256,6 +299,9 @@ __Event__
 |     事件名     | 说明 | 参数 |
 | ------------ | --- | ----- |
 | click | 点击 cell 时触发 | - |
+
+
+
 
 
 
