@@ -3,6 +3,6 @@
 </template>
 <script>
   export default {
-    name: 'nav'
+    name: 'navs'
   }
 </script>

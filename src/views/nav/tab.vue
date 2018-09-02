@@ -17,8 +17,6 @@
 </template>
 
 <script>
-  import Vue from 'vue'
-
   import tabs from '@/components/tabs/tabs.vue'
   import tabNavs from '@/components/tabs/tabNavs.vue'
   import tabNavsItem from '@/components/tabs/tabNavsItem.vue'
@@ -37,7 +35,7 @@
     },
     methods: {
       clickFn(){
-        console.log('opop')
+        console.log('click')
       }
     }
   }
