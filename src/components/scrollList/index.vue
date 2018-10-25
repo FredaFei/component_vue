@@ -58,7 +58,7 @@
       })
     },
     watch: {
-      scrollList() {
+      dataList() {
         setTimeout(() => {
           this.refresh()
         }, 50)
